@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore webpack builds. You should make them yourself
+app/assets/javascripts/main.bundle.js
+app/assets/javascripts/components.js
 
 node_modules/
 

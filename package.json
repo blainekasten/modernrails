@@ -1,11 +1,14 @@
 {
   "name": "HPWeb",
   "devDependencies" : {
-    "browserify": "~> 6.3",
-    "browserify-incremental": "^1.4.0"
+    "react": "^0.12.0"
   },
   "license": "MIT",
   "engines": {
     "node": ">= 0.10"
+  },
+  "dependencies": {
+    "jsx-loader": "^0.12.0",
+    "webpack": "^1.4.0-beta2"
   }
 }

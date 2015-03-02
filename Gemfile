@@ -8,8 +8,8 @@ gem 'pg', '~> 0.17.1'
 
 # Assets
 gem "bower-rails", "~> 0.9.1"
-gem "browserify-rails", "~> 0.7"
-gem 'react-rails', '~> 0.12.0.0'
+gem "polyfillrb", git: 'git://github.com/blainekasten/polyfillrb'
+gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'sass-rails', '~> 4.0.3'
 gem "slim-rails"
 gem 'uglifier', '>= 1.3.0'
@@ -19,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development do
   gem 'guard-rspec', require: false
+  gem 'guard-webpack', require: false
+  gem 'guard-flow', require: false
 end
 
 
