@@ -8,7 +8,7 @@ gem 'pg', '~> 0.17.1'
 
 # Assets
 gem "bower-rails", "~> 0.9.1"
-gem "polyfillrb", git: 'git://github.com/blainekasten/polyfillrb'
+gem "polyfillrb", "~> 1.0.0"
 gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 gem 'sass-rails', '~> 4.0.3'
 gem "slim-rails"

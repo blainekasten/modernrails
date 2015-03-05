@@ -3,10 +3,10 @@ html
   head
     title ModernRails
     = stylesheet_link_tag 'application', media: 'all'
-    = polyfills
-    = javascript_include_tag 'application'
     = csrf_meta_tags
   body
-
     = yield
+
+    = polyfills
+    = javascript_include_tag 'application'
 

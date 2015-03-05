@@ -3,3 +3,5 @@
 
 asset 'lodash', '~2.4'
 asset 'moment', '~2.9'
+asset 'flux', '~2.0'
+asset 'eventEmitter', '~4.2'

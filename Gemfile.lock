@@ -1,10 +1,4 @@
 GIT
-  remote: git://github.com/blainekasten/polyfillrb
-  revision: 60aebd80a30dc665b231c1c4b469d793c8cc26b8
-  specs:
-    polyfillrb (1.0.0)
-
-GIT
   remote: git://github.com/reactjs/react-rails.git
   revision: ac4320eb183b948ec328a695cd54d27c769073af
   specs:
@@ -104,6 +98,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     pg (0.17.1)
+    polyfillrb (1.0.0)
     polyglot (0.3.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -212,7 +207,7 @@ DEPENDENCIES
   guard-rspec
   guard-webpack
   pg (~> 0.17.1)
-  polyfillrb!
+  polyfillrb (~> 1.0.0)
   rails (= 4.1.0)
   react-rails (~> 1.0.0.pre)!
   rspec-rails (~> 3.0.0.beta)

@@ -30,7 +30,7 @@
 
           // Assume className is simple and can be found at top-level (window).
           // Fallback to eval to handle cases like 'My.React.ComponentName'.
-          var constructor = require('../components/' + className.toLowerCase());
+          var constructor = require('./components/' + className.toLowerCase());
           var propsJson = node.getAttribute(ReactRailsUJS.PROPS_ATTR);
           var props = propsJson && JSON.parse(propsJson);
 

@@ -33,20 +33,12 @@ module.exports = [{
 
   // The 'module' and 'loaders' options tell webpack to use loaders.
   // @see http://webpack.github.io/docs/using-loaders.html
-  module: {
-    loaders: [
-      {
-        // @see https://github.com/petehunt/jsx-loader
-        // It was installed with 'npm install jsx-loader --save' and transpiles
-        // jsx code
-        test: /\.jsx$/,
-        loader: 'jsx-loader?harmony&stripTypes'
-      }
-    ]
-  },
+  module: modules(),
 
   resolve: {
     extensions: ['', '.js', '.jsx'],
+
+    alias: aliases()
   }
 },
 
@@ -62,7 +54,35 @@ module.exports = [{
     // We want to save the bundle in the same directory as the other JS.
     path: __dirname + '/app/assets/javascripts',
   },
-  module: {
+  module: modules(),
+
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+
+    alias: aliases()
+  }
+
+
+}];
+
+
+
+
+/*
+ * define the aliases for requiring modules
+ */
+function aliases(){
+  return {
+    moment$: __dirname + '/vendor/assets/bower_components/moment/moment.js',
+    flux$: __dirname + '/vendor/assets/bower_components/flux/dist/Flux.js',
+    event_emitter$: __dirname + '/vendor/assets/javascripts/event_emitter.js',
+    base_event_emitter$: __dirname + '/vendor/assets/bower_components/eventEmitter/EventEmitter.js'
+  }
+}
+
+
+function modules(){
+  return {
     loaders: [
       {
         // @see https://github.com/petehunt/jsx-loader
@@ -71,13 +91,13 @@ module.exports = [{
         test: /\.jsx$/,
         loader: 'jsx-loader?harmony&stripTypes'
       }
+    ],
+
+    // used to ignore parse errors on external dependenices
+    // that are 'pre-built'
+    noParse: [
+      /assets\/bower_components\/flux/
     ]
-  },
 
-  resolve: {
-    extensions: ['', '.js', '.jsx']
   }
-
-
-}];
-
+}

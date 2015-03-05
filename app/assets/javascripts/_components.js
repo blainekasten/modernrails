@@ -1,3 +1,3 @@
-var React = require('react');
-window.Demo = require('./components/demo');
+// list all components on the window that are used in pre-rendering
+window.TodoView = require('./views/todo_view');
 
